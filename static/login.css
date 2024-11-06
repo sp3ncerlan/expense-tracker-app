@@ -1,0 +1,75 @@
+.login-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 10px 40px; 
+}
+
+.welcome-section {
+    max-width: x;
+}
+
+.welcome-section h1 {
+    font-size: 100px;
+    font-weight: normal;
+    color: #333;
+}
+
+.brand-name {
+    color: #3b8c5a;
+    font-weight: bold;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.login-form {
+    width: 350px;
+    padding: 20px 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: auto;
+}
+
+.login-form button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #555;
+}

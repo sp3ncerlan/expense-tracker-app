@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+button {
+    margin: 5px;
+}
+
+.current-date {
+    margin-bottom: 20px; /* Adds space below the date */
+    font-size: 16px;
+    color: #666;
+}
+
+.see-all-transactions {
+    display: block;
+    margin-top: 20px; /* Adds space above the link */
+    font-size: 14px;
+    color: #3b8c5a;
+    text-align: left;
+    text-decoration: none;
+}
+
+.container {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.left, .right {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 50%;
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.transaction > div {
+    flex: 1;
+}
+
+.transaction .transaction-amount {
+    text-align: right;
+    flex: 0.5;
+}
+
+.transaction-buttons {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.monthly-spend {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.spend-limit {
+    color: green;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header a {
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+#editBudgetForm {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#editBudgetForm h3 {
+    margin-top: 0;
+}
+
+#editBudgetForm input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#editBudgetForm button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}

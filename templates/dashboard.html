@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expense Tracker Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="left">
+                <div class="header">
+                    <p>Good Morning, Spencer</p>
+                    <div>
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/help">Help</a>
+                    </div>
+                </div>
+
+                <div id="currentMonthsTransactions">
+                    
+                </div>
+                
+                <p><a href="/all-transactions">See All Transactions</a></p>
+            </div>
+
+            <div class="right">
+                <h2>Monthly Spend</h2>
+                <div class="monthly-spend">${{ totalMonthlySpend }}</div>
+                <p>out of $<span id="budgetAmount" class="spend-limit">--.--</span></p>
+                <button onclick="openAddExpenseForm()">Add Expense</button>
+                <button onclick="openEditBudgetForm()">Edit Monthly Budget</button>
+            </div>
+
+            <div id="addExpenseForm" style="display: none;">
+                <h3>Add New Transaction</h3>
+                <form id="expenseForm">
+                    <input type="text" id="description" placeholder="Description" required>
+                    <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+                    <input type="date" id="date" required>
+                    <button type="button" onclick="addTransaction()">Submit</button>
+                    <button type="button" onclick="closeAddExpenseForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="editExpenseForm" style="display: none;">
+            <h3>Edit Transaction</h3>
+            <form id="editForm">
+                <input type="hidden" id="editTransactionId">
+                <input type="text" id="editDescription" placeholder="Description" required>
+                <input type="number" id="editAmount" placeholder="Amount" step="0.01" required>
+                <input type="date" id="editDate" required>
+                <button type="button" onclick="submitEditTransaction()">Save</button>
+                <button type="button" onclick="closeEditExpenseForm()">Cancel</button>
+            </form>
+        </div>
+
+        <div id="editBudgetForm" style="display: none;">
+            <h3>Edit Monthly Budget</h3>
+            <input type="number" id="newBudgetAmount" placeholder="Enter new budget amount" required>
+            <button type="button" onclick="saveBudget()">Save</button>
+            <button type="button" onclick="closeEditBudgetForm()">Cancel</button>
+        </div>
+
+        <script src="{{ url_for('static', filename='app.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!-- templates/help.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='help.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="header">
+            <a href="{{ url_for('dashboard') }}" class="nav-link">Dashboard</a>
+            <span class="current-page">Help</span>
+        </div>
+
+        <h1>Help Page</h1>
+
+        <!-- Help Content -->
+        <div class="help-content">
+            <div class="info-box">
+                <span class="info-icon">ℹ️</span>
+                <h2>How Do I Use Plutus?</h2>
+                <p>
+                    Utilizing Plutus might seem daunting at first. There are three simple components that work in tandem:
+                    the Dashboard (provides an overview), Add/Edit functionality (fill in transaction history),
+                    and the Monthly Budget setter (to keep your expenses at bay!).
+                </p>
+                <p>
+                    Have fun on your budgeting journey, and hopefully it helps you on your way to financial independence!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
